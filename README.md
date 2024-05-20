@@ -1,6 +1,5 @@
 # Very Simple Express Demo
-THis is a very simple express demo. What it simple does is that it has 3 endpoints to save, list and find listings. It saves the listings in memory in an array and iterates over this array when you try to find a listing.
-
+This is a very simple express demo. It has 3 endpoints to save, list and find listings. It saves the listings in memory, retrieves a listing or finds a `Listing` by id.
 
 # Node version
 This project has been coded using 
@@ -19,6 +18,15 @@ npm install
 ```
 npm start
 ```
+# The Listing Interface
+
+When creating a new `Listing` be aware that all those fields are required in the POST JSON:
+```
+    title: string;
+    price: number;
+    description: string;  
+```
+The id of the saved `Listing` object will be assigned by the application and you should expect an error response if you don't send a valid JSON.
 
 # Testing
 
