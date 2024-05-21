@@ -1,5 +1,5 @@
 # Very Simple Express Demo
-This is a very simple express demo. It has 3 endpoints to save, list and find listings. It saves the listings in memory, retrieves a listing or finds a `Listing` by id.
+This is a very simple express demo. It has 3 endpoints to save, list and delete listings. It saves the listings in memory, retrieves a listing or finds a `Listing` by id.
 
 # Node version
 This project has been coded using 
