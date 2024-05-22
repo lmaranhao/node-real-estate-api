@@ -14,6 +14,9 @@ app.post('/listings', (req: Request, res: Response) => {
     if (!newListing.title || !newListing.price || !newListing.description) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
+    if(typeof newListing.price !== 'number' || newListing.price <= 0) {
+      return res.status(400).json({ error: 'Price must be a positive number' });
+    }
     newListing.id = `${Date.now()}`; // generate a unique ID
     listings.set(newListing.id, newListing);
     res.status(201).json(newListing);
