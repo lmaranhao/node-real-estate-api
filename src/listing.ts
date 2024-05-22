@@ -1,6 +1,6 @@
 export interface Listing {
-    id: string;
-    title: string;
-    price: number;
-    description: string;
-  }
+  id: string;
+  title: string;
+  price: number;
+  description: string;
+}
