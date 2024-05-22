@@ -31,7 +31,7 @@ app.delete('/listings/:id', (req: Request, res: Response) => {
     const id = req.params.id;
     if (listings.has(id)) {
       listings.delete(id);
-      res.status(204).send();
+      res.status(200).json({ message: 'The listing has been delete' });
     } else {
         return res.status(404).json({ error: 'Listing not found' });
     }
